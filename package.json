@@ -2,7 +2,6 @@
   "scripts": {
     "start": "npx expo start --dev-client",
     "android": "npx expo run:android",
-    "ios": "npx expo run:ios",
     "web": "npx expo start --web",
     "lint": "npx eslint .",
     "buildProd": "rm -rf build.ipa && eas build -p ios --profile production --output build.ipa --local --non-interactive",
@@ -12,8 +11,8 @@
     "runSim": "eas build:run -p ios --path simulator.tar.gz",
     "startDev": "npx expo start --dev-client",
     "startNoDev": "npx expo start --no-dev --minify",
-    "buildProdAnd": "rm -rf build.aab && eas build -p android --profile production --output build.aab --local --non-interactive",
-    "buildDevAnd": "rm -rf dev.apk && eas build -p android --profile development --output dev.apk --local --non-interactive",
+    "build:android": "rm -rf build.aab && eas build -p android --profile production --output build.aab --local --non-interactive",
+    "build:android:dev": "rm -rf dev.apk && eas build -p android --profile development --output dev.apk --local --non-interactive",
     "buildPrevAnd": "rm -rf prev.apk && eas build -p android --profile preview --output prev.apk --local --non-interactive",
     "runAnd": "eas build:run -p android --path dev.apk",
     "buildAndSubmit": "rm -rf build.ipa && eas build -p ios --profile production --output build.ipa --local --non-interactive && eas submit -p ios --path build.ipa --non-interactive",

@@ -37,6 +37,9 @@
       "env": {
         "API_URL": "https://memmy.app/api",
         "APP_URL": "memmyapp://"
+      },
+      "android": {
+        "buildType": "apk"
       }
     },
     "production": {
