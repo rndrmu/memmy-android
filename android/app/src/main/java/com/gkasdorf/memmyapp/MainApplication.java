@@ -41,6 +41,8 @@ public class MainApplication extends Application implements ReactApplication {
         return ".expo/.virtual-metro-entry";
       }
 
+
+
       @Override
       protected boolean isNewArchEnabled() {
         return BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;

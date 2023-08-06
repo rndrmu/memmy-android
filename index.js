@@ -2,7 +2,8 @@ if (__DEV__) {
   import("./ReactotronConfig").then(() => console.log("Reactotron Configured"));
 }
 
-import { registerRootComponent } from "expo";
+// non expo root component
+import { AppRegistry } from "react-native";
 import "./src/plugins/i18n/i18n";
 
 import App from "./App";
@@ -13,4 +14,4 @@ import { enableMapSet } from "immer";
 // It also ensures that whether you load the app in Expo Go or in a native build,
 // the environment is set up appropriately
 enableMapSet();
-registerRootComponent(App);
+AppRegistry.registerComponent("main", () => App);
