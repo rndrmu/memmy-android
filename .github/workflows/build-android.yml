@@ -21,11 +21,8 @@ jobs:
       - name: Install project dependencies
         run: yarn install
 
-      - name: Authenticate with Expo
-        run: npx expo login -u ${{ secrets.EXPO_USERNAME }} -p ${{ secrets.EXPO_PASSWORD }}
-
       - name: Build Expo app for Android
-        run: npx expo build:android --non-interactive
+        run: yarn build:android:dev
 
       - name: Publish to Expo
         run: npx expo publish --platform android --release-channel main # Replace "main" with your desired release channel
